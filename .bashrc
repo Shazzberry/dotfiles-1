@@ -11,6 +11,7 @@ export GPG_TTY=$(tty)
 
 # Add local scripts to PATH
 export PATH=$PATH:~/bin
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Detect kernel
 platform='unknown'
@@ -75,6 +76,9 @@ cdu () { cd "${PWD%/$1/*}/$1"; }
 # Source some private env vars
 [ -f ~/.local_vars ] && source ~/.local_vars
 
+# Flux namespace forwarding
+export FLUX_FORWARD_NAMESPACE=flux
+
 # Urbit env vars
 export MOON="silteb-famnux-sicbyn-sipbec"
 
@@ -86,7 +90,5 @@ export VAULT_ADDR=https://127.0.0.1:8200/
 source <(kubectl completion bash)
 source <(minikube completion bash)
 source <(helm completion bash)
-complete -o default -F __start_kubectl k
 complete -C /home/null/.local/bin/vault vault
-complete -C /home/null/.local/bin/consul consul
-export PATH=$PATH:~/.jx/bin
+complete -C /home/null/.local/bin/consul consulexport PATH=$PATH:~/.jx/bin
