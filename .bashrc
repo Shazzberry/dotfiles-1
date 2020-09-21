@@ -50,6 +50,7 @@ if [[ "$platform" == "macos" ]]; then
 fi
 
 # User specific aliases and functions
+alias k="kubectl"
 alias attach="tmux attach -t"
 alias ga="git add"
 alias gc="git commit"
