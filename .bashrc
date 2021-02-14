@@ -93,3 +93,4 @@ source <(minikube completion bash)
 source <(helm completion bash)
 complete -C /home/null/.local/bin/vault vault
 complete -C /home/null/.local/bin/consul consulexport PATH=$PATH:~/.jx/bin
+source <(kubectl completion bash)

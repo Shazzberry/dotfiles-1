@@ -23,3 +23,8 @@ export GPG_TTY=$(tty)
 # Java_Home settings
 export JAVA_HOME=jdk-install-dir
 export PATH=$JAVA_HOME/bin:$PATH
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+
+#python3
+export PATH=/usr/local/share/python:$PATH
