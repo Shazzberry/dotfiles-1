@@ -12,6 +12,7 @@ export GPG_TTY=$(tty)
 # Add local scripts to PATH
 export PATH=$PATH:~/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="$PATH:/Users/davidallen/dev/hyper/edgeone/istio-1.9.0/bin"
 
 # Detect kernel
 platform='unknown'
